@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit{
 
   login(){
     console.log(this.email, this.password);
-    this.http.post("http://localhost:4400/users", { email:this.email, password:this.password}).subscribe(res => {
+    this.http.post(environment.server + "/users", { email:this.email, password:this.password}).subscribe(res => {
       if(res){
           this.router.navigate(['/admin'])
       } else {

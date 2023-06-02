@@ -3,6 +3,7 @@ import { productInfo } from '../interface/productInfo.interface';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class ProductComponent {
     let productID = this.route.snapshot.paramMap.get("id");
     console.log("productID is:", productID);
 
-    this.http.get("http://localhost:4400/productsInfo/" + productID).subscribe(productData =>{
+    this.http.get(environment.server + "/productsInfo/" + productID).subscribe(productData =>{
       this.productInfo = productData;
       // console.log("productData is:", productData);
       // console.log("firstProduct is:", this.productInfo.firstProduct);

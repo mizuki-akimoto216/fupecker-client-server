@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../interface/productList.interface';
 import { Products } from '../interface/productList.interface';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent {
   }
 
   ngOnInit():void {
-    this.http.get<Products>("http://localhost:4400/products").subscribe(responce => {
+    this.http.get<Products>(environment.server + "/products").subscribe(responce => {
       console.log(responce.products);
       this.productList = responce.products;
       this.hiddenProductList = this.productList.filter(product => product.online === 0);

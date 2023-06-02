@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin-product-detail',
@@ -25,7 +26,7 @@ export class AdminProductDetailComponent implements OnInit{
     let productID = this.route.snapshot.paramMap.get("id");
     console.log(productID);
 
-    this.http.get("http://localhost:4400/adminProductDetails/" + productID).subscribe(res => {
+    this.http.get(environment.server + "/adminProductDetails/" + productID).subscribe(res => {
       this.productDetails = res;
       console.log(this.productDetails);
     })
@@ -35,7 +36,7 @@ export class AdminProductDetailComponent implements OnInit{
   addNewPD(){
     let productID = this.route.snapshot.paramMap.get("id");
     console.log(productID, this.image,this.colorCode, this.colorName);
-    this.http.post("http://localhost:4400/adminProductDetails", {id:productID, image:this.image, colorCode:this.colorCode, colorName:this.colorName}).subscribe(res => {
+    this.http.post(environment.server + "/adminProductDetails", {id:productID, image:this.image, colorCode:this.colorCode, colorName:this.colorName}).subscribe(res => {
     if(res){
       localStorage.setItem('message', "Added product detail successfully");
     } else {
@@ -55,7 +56,7 @@ export class AdminProductDetailComponent implements OnInit{
 
   updateConfirmed(productDetail: any) {
       console.log(productDetail.productDetailID, productDetail.image, productDetail.colorCode, productDetail.colorName);
-    this.http.put("http://localhost:4400/adminProductDetails/" + productDetail.productDetailID, {image:productDetail.image, colorCode:productDetail.colorCode, colorName:productDetail.colorName}).subscribe(res => {
+    this.http.put(environment.server + "/adminProductDetails/" + productDetail.productDetailID, {image:productDetail.image, colorCode:productDetail.colorCode, colorName:productDetail.colorName}).subscribe(res => {
       if(res){
         localStorage.setItem('message', "Updated product detail successfully");
       } else {
@@ -74,7 +75,7 @@ export class AdminProductDetailComponent implements OnInit{
   }
 
   deleteConfirmed(productDetail:any){
-    this.http.delete("http://localhost:4400/adminProductDetails/" + productDetail.productDetailID).subscribe(res => {
+    this.http.delete(environment.server + "/adminProductDetails/" + productDetail.productDetailID).subscribe(res => {
       if(res){
         localStorage.setItem('message', "Deleted product detail successfully");
       } else {

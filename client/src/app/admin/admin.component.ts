@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin',
@@ -24,14 +25,14 @@ export class AdminComponent implements OnInit{
     this.message = localStorage.getItem('message');
     localStorage.removeItem('message');
 
-    this.http.get("http://localhost:4400/adminProducts").subscribe(res => {
+    this.http.get(environment.server + "/adminProducts").subscribe(res => {
       this.products = res;
     })
   }
 
   //Add new products
   addNew(){
-      this.http.post("http://localhost:4400/adminProducts", {name:this.name, price:this.price, stock:this.stock, description:this.description, online:this.online}).subscribe(res => {
+      this.http.post(environment.server + "/adminProducts", {name:this.name, price:this.price, stock:this.stock, description:this.description, online:this.online}).subscribe(res => {
       if(res){
         localStorage.setItem('message', 'Added product successfully');
       } else {
@@ -51,7 +52,7 @@ export class AdminComponent implements OnInit{
 
   updateConfirmed(product: any) {
     this.productID = product.productID;
-    this.http.put("http://localhost:4400/adminProducts/" + this.productID, {name:product.name, price:product.price, stock:product.stock, description:product.description, online:product.online}).subscribe(res => {
+    this.http.put(environment.server + "/adminProducts/" + this.productID, {name:product.name, price:product.price, stock:product.stock, description:product.description, online:product.online}).subscribe(res => {
       if(res){
         localStorage.setItem('message', 'Updated product successfully');
       } else {
@@ -71,7 +72,7 @@ export class AdminComponent implements OnInit{
 
   deleteConfirmed(product: any) {
     this.productID = product.productID;
-    this.http.delete("http://localhost:4400/adminProducts/" + this.productID).subscribe(res => {
+    this.http.delete(environment.server + "/adminProducts/" + this.productID).subscribe(res => {
       if (res) {
         localStorage.setItem('message', 'Deleted product successfully');
       } else {
@@ -82,7 +83,7 @@ export class AdminComponent implements OnInit{
   }
   
   setLiveStatus(productID:number, status:boolean){
-    this.http.put("http://localhost:4400/productOnline/" + productID, {online:status}).subscribe(res => {
+    this.http.put(environment.server + "/productOnline/" + productID, {online:status}).subscribe(res => {
       if(res){
         console.log('Success');
       } else {

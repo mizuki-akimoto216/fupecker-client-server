@@ -1,10 +1,11 @@
 import express from 'express';
 import mysql from 'mysql';
 import cors from 'cors';
+import 'dotenv/config';
 
 const server = express();
 server.use(express.json());
-const port = 4400;
+const port = process.env.NODEPORT;
 server.use(cors());
 
 // server.listen(port,function(){
@@ -17,11 +18,11 @@ server.listen(port, () => {
 })
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'root',
-    database: 'fupecker'
+    port: process.env.DBPORT,
+    host: process.env.DBSERVER,
+    user: process.env.DBUSER,
+    password: process.env.DBPASSWORD,
+    database: process.env.DB
 })
 
 db.connect((error) => {
