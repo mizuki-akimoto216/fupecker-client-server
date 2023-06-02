@@ -1,0 +1,108 @@
+form {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.input-form {
+    margin-bottom: 40px;
+}
+
+a {
+    color: #00A692;
+    font-size: 0.9rem;
+}
+
+.policy {
+    margin-left: 40px;
+}
+
+.signup {
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #00A692;
+    padding: 10px 0;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.signup:hover {
+    border: 2px solid #00A692;
+    background-color: white;
+    color: #00A692;
+    transition: 0.3s;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    border: none;
+    background-color: #00A692;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) { 
+    
+    form {
+        margin-top: 70px;
+        height: 60vh;
+        font-size: 1.5rem;
+        width: 60%;
+    }
+
+    input {
+        font-size: 1.5rem;       
+    }
+
+    .input-form {
+        margin-bottom: 60px;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
+    
+    .policy {
+        margin-left: 100px;
+    }
+
+    .signup {
+        font-size: 1.5rem;       
+        padding: 12px 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) { 
+
+    form {
+        height: 70vh;
+        margin-top: 50px;
+        font-size: 1.3rem;
+        width: 30%;
+    }
+
+    input {
+        font-size: 1.3rem;       
+    }
+    
+    .signup {
+        font-size: 1.3rem;       
+    }
+    
+    a {
+        font-size: 1rem;
+    }
+        
+    .policy {
+        margin-left: 50px;
+    }
+    
+    .name, .email-password {
+        margin-bottom: 10px;
+    }
+}

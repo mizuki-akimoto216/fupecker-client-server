@@ -1,0 +1,39 @@
+<div class="cart">
+    <div class="container">
+        <div class="imgInfo row">
+            <div class="col-xl-6 col-md-6 col-6">
+                <a routerLink="/product">
+                    <img class="cartImg" src="../../assets/product1-1.png" alt="">
+                </a>
+            </div>
+            <div class="cartInfo col-xl-6 col-md-6 col-6">
+                <h2 class="productName">{{ cartList.productName }}</h2>
+                <div class="colorTotal">
+                    <div class="color">
+                        <p>Color : </p>
+                        <p>{{ cartList.color }}</p>
+                    </div>
+                    <div class="total">
+                        <p>Total : </p>
+                        <p>$ {{ cartList.price * selectedItemCount }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottomPart">
+        <select [(ngModel)]="selectedItemCount" class="amountOption" name="" id="">
+            <option *ngFor="let amountOption of generateArray(cartList.amount)">{{ amountOption }}</option>
+        </select>
+        <div class="fileUpload">
+            <label for="file_upload">
+                Upload File
+                <input id="file_upload" type="file" (change)="onFileSelected($event)">
+            </label>
+            <div class="selectedFileName" *ngIf="selectedFileName">{{ selectedFileName }}</div>
+            <p class="fileNotice">*Please upload a photo of your pet you want to create sticker with. The extension should be .png or .jpeg.</p>
+        </div>
+        <button [disabled]="!selectedFileName" routerLink="/login" class="logIn">Log in</button>
+        <button [disabled]="!selectedFileName" routerLink="/signup" class="logIn">Sign up</button>
+    </div>
+</div>

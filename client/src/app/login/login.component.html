@@ -1,0 +1,19 @@
+<form>
+    <div class="input-form">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+          </div>
+          <div [hidden]="hideLoginStatus">
+            <div class="message" *ngIf="loginSuccess">Greate!</div>
+            <div class="message" *ngIf="!loginSuccess">Your password or email is not collect</div>
+          </div>
+    </div>
+    <button [disabled]="!email || !password" class="login" routerLink="/payment">Log in for customer</button>
+    <button (click)="login()" [disabled]="!email || !password" class="login l-admin">Log in for staff</button>
+
+</form>

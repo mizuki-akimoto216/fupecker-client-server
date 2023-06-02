@@ -1,0 +1,342 @@
+
+/* top
+----------------------------------------*/
+
+.top {
+    height: 100vh;
+}
+
+.firstBanner {
+    position: relative;
+    height: 100vh;
+}
+
+.topUpper {
+    position: absolute;
+    top: -2%;
+    left: 0%;
+}
+
+.brandName {
+    position: absolute;   
+    top: 40%;
+    left: 16%;
+}
+ 
+.topBottom {
+    position: absolute;   
+    bottom: 5%;
+    right: 0%;
+}
+ 
+.topPet {
+    width: 80%;
+}
+
+.topPad {
+    width: 20%;
+}
+
+.secondBanner {
+    position: relative;
+    height: 100vh;
+}
+
+.bannerText {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    h2 {
+        position: absolute;
+        top: 45%;
+        left: 20%;       
+    }
+}
+
+.iphone {
+    width: 180px;
+    position: absolute;
+    bottom: 21%;
+    left: 0%;
+}
+
+.coloredDog {
+    width: 220px;
+    position: absolute;
+    bottom: 12%;
+    right: 3%;
+}
+
+.thirdBanner {
+    position: relative;
+    height: 100vh;
+}
+
+.notebook {
+    width: 250px;
+    position: absolute;
+    bottom: 36%;
+    left: 0%;
+}
+
+.pc {
+    width: 300px;
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+/* product
+----------------------------------------*/
+
+.product {
+    width: 320px;
+    background-color: #F6E2A3;
+    margin: 0 auto 60px auto;
+}
+
+.productContents {
+    width: 90%;
+    margin: 20px auto 20px auto;
+}
+
+.carousel {
+    margin-bottom: 10px;
+}
+
+.colorOption {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.colorOptions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stockPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.price {
+    color: #4169E2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.stock {
+    color: #4169E2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.buyNow {
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #E73245;
+    padding: 8px 0;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-bottom: 16px;
+}
+
+.buyNow:hover {
+    border: 2px solid #E73245;
+    background-color: white;
+    color: #E73245;
+    transition: 0.3s;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    border: none;
+    background-color: #E73245;
+    color: white;
+}
+
+/* how to order
+----------------------------------------*/
+.howToOrder {
+    margin: 0 auto 100px 0;
+}
+
+.howToOrderTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.process {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.introduction {
+    padding-top: 100px;
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    .processNo {
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        margin: 0;
+        font-size: 5.5rem;
+    } 
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+    h3 {
+        text-align: center;
+    }
+    img {
+        width: 300px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+/* top
+----------------------------------------*/
+    .topPet {
+        width: 450px;
+    }
+    
+    .topPad {
+        width: 150px;
+    }
+
+    .topUpper {
+        top: 2%;
+        left: 5%;
+    }
+
+    .brandName {
+        top: 43%;
+        left: 27%;
+    }
+    
+    .topBottom {
+        right: 5%;
+    }
+
+    .howToOrderTitle {
+        font-size: 4rem;
+    }
+
+    section {
+        margin-bottom: 150px;
+    }
+
+    .bannerText {
+        img {
+            width: 523px;
+        }
+        h2 {
+            font-size: 2.5rem;
+            top: 45%;
+            left: 27%;       
+        }
+    }
+    
+    .iphone {
+        width: 300px;
+        bottom: 22%;
+        left: 13%;
+    }
+    
+    .coloredDog {
+        width: 350px;
+        bottom: 12%;
+        right: 10%;
+    }
+
+    .notebook {
+        width: 460px;
+        bottom: 36%;
+        left: 0%;
+    }
+    
+    .pc {
+        width: 510px;
+        bottom: 10%;
+        right: 3%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+/* top
+----------------------------------------*/
+    .topPet {
+        width: 420px;
+    }
+    
+    .topPad {
+        width: 100px;
+    }
+
+    .topUpper {
+        top: 0%;
+        left: 0%;
+    }
+
+    .brandName {
+        top: 40%;
+        left: 33%;
+    }
+    
+    .topBottom {
+        bottom: 2%;
+        right: 0%;
+    }
+
+    .bannerText {
+        h2 {
+            left: 37%;       
+        }
+    }
+        
+    .iphone {
+        width: 280px;
+        bottom: 18%;
+        left: 9%;
+    }
+    
+    .coloredDog {
+        width: 330px;
+    }
+
+    .notebook {
+        width: 440px;
+        bottom: 13%;
+        left: 3%;
+    }
+    
+    .pc {
+        width: 490px;
+    }
+
+}

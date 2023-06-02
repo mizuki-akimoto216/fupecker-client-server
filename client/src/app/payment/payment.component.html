@@ -1,0 +1,60 @@
+<form>
+    <fieldset class="address-section">
+    <legend class="title-1">Shipping Address</legend>
+        <div class="mb-3">
+            <label for="country" class="form-label title-2">Country</label>
+            <select [(ngModel)]="selectedCountry" name="country" id="country" class="form-select">
+                <option value="" selected>-</option>
+                <option value="canada">Canada</option>
+                <option value="us">US</option>
+                <option value="japan">Japan</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input [(ngModel)]="address" name="address" type="address" class="form-control" id="address">
+        </div>
+        <div class="mb-3">
+            <label for="address2" class="form-label">Apartment, suite, etc</label>
+            <input [(ngModel)]="address2" name="address2" type="address2" class="form-control" id="address2">
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input [(ngModel)]="city" name="city" type="city" class="form-control" id="city">
+        </div>
+        <div class="addressFlex">
+            <div class="province mb-3">
+                <label for="province" class="form-label">Province, States, Prefecture</label>
+                <input [(ngModel)]="province" name="province" type="province" class="form-control" id="province">
+            </div>
+            <div class="postalCode mb-3">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input [(ngModel)]="postalCode" name="postalCode" type="postalCode" class="form-control" id="postalCode">
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="mb-3 payment-section">
+        <legend class="title-1">Payment</legend>
+        <div class="cardInfo">
+            <div class="mb-3 cardNo">
+                <label for="cardNo" class="form-label">Card No</label>
+                <input [(ngModel)]="cardNo" name="cardNo" type="cardNo" class="form-control" id="cardNo">
+            </div>
+            <div class="mb-3 nameOfCard">
+                <label for="nameOfCard" class="form-label">Name of Card</label>
+                <input [(ngModel)]="nameOfCard" name="nameOfCard" type="nameOfCard" class="form-control" id="nameOfCard">
+            </div>
+        </div>
+        <div class="cardDate">
+            <div class="mb-3 exprationDate">
+                <label for="exprationDate" class="form-label">Expration Date</label>
+                <input [(ngModel)]="exprationDate" name="exprationDate" type="exprationDate" class="form-control" id="exprationDate">
+            </div>
+            <div class="mb-3 securityCode">
+                <label for="securityCode" class="form-label">Security Code</label>
+                <input [(ngModel)]="securityCode" name="securityCode" type="securityCode" class="form-control" id="securityCode">
+            </div>
+        </div>
+        </fieldset>
+        <button [disabled]="!selectedCountry || !address || !address2 || !city || !province || !postalCode || !cardNo || !nameOfCard || !exprationDate || !securityCode" routerLink="/complete" class="payNow mb-3">Pay Now</button>
+</form>

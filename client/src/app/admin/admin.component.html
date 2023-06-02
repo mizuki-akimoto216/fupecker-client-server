@@ -1,0 +1,76 @@
+<div class="container">
+     <div class="row">
+        <div class="col-2 admin-menu">
+            <h2 class="admin-title flex">
+                <img src="../../assets/logo.png" alt="">
+                Admin
+            </h2>
+            <ul>
+                <li>Products</li>
+                <li>Orders</li>
+                <li>Reports</li>
+                <li>Messages</li>
+                <li>Settings</li>
+                <li>Sign Out</li>        
+            </ul>
+        </div>
+        <div class="col-10 productList">
+            <h2 class="admin-title">Products</h2>
+            <p class="message">{{message}}</p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Display</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <th scope="row">{{product.productID}}</th>
+                    <td class="name"><input type="text" [(ngModel)]="product.name"></td>
+                    <td class="price"><input type="number" [(ngModel)]="product.price"></td>
+                    <td class="stock"><input type="number" [(ngModel)]="product.stock"></td>
+                    <td class="description">
+                        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="product.description"></textarea>
+                    </td>
+                    <td class="toggle">
+                        <div class="form-check form-switch">
+                            <input [checked]="product.online" (click)="setLiveStatus(product.productID, !product.online)" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                        </div>
+                    </td>
+                    <td class="buttons">
+                        <button (click)="updateProduct(product)" class="update-btn">Update</button>
+                        <button (click)="deleteProduct(product)" class="delete-btn">Delete</button>
+                        <a [routerLink]="['/adminProductDetail', product.productID]" class="detail-btn">Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td class="name"><input type="text" [(ngModel)]="name"></td>
+                    <td class="price"><input type="number" [(ngModel)]="price"></td>
+                    <td class="stock"><input type="number" [(ngModel)]="stock"></td>
+                    <td class="description">
+                        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="description"></textarea>
+                    </td>
+                    <td class="toggle">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="online">
+                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                        </div>
+                    </td>
+                    <td class="buttons">
+                        <button (click)="addNew()" class="addnew-btn">Add New</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+     </div>
+</div>
+

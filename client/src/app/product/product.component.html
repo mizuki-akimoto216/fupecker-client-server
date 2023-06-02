@@ -1,0 +1,49 @@
+<div class="container" *ngIf="productInfo">
+    <div class="row">
+        <div class="productImg col-xl-6 col-md-12 col-12">
+            <div id="carousel" class="carousel slide">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./../assets/{{ productInfo.firstProduct }}" class="d-block w-100" alt="Image of a product of fupecker">
+                </div>
+                <div class="carousel-item">
+                    <img src="./../assets/{{ productInfo.secondProduct }}" class="d-block w-100" alt="Image of a product of fupecker">
+                </div>
+                <div class="carousel-item">
+                    <img src="./../assets/{{ productInfo.thirdProduct }}" class="d-block w-100" alt="Image of a product of fupecker">
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="imgPreview">
+                <img src="./../assets/{{ productInfo.firstProduct }}"  class="thumbnail" (click)="switchImage((productInfo.firstProduct))" alt="">
+                <img src="./../assets/{{ productInfo.secondProduct }}"  class="thumbnail" (click)="switchImage((productInfo.secondProduct))" alt="">
+                <img src="./../assets/{{ productInfo.thirdProduct }}"  class="thumbnail" (click)="switchImage((productInfo.thirdProduct))" alt="">
+            </div>
+        </div>
+        <div class="productInfo col-xl-6 col-md-12 col-12">
+            <div class="productNamePrice">
+                <h2 class="productName">{{ productInfo.name }}</h2>
+                <p class="price">$ {{ productInfo.price }}</p>
+            </div>
+            <select [(ngModel)]="selectedColor" class="colorSelect" name="" id="">
+                <option value="">
+                    Select Color
+                </option>
+                <option [value]="colorName" *ngFor="let colorName of parseColorName(productInfo.colorName)">
+                    {{ colorName }}
+                </option>
+            </select>
+            <div *ngIf="showErrorMessage" class="productErrorMessage">Please select a color</div>
+            <a (click)="addToCart()" class="addCart">Add to Cart</a>
+            <p class="description">{{ productInfo.description }}</p>
+        </div>
+    </div>
+</div>

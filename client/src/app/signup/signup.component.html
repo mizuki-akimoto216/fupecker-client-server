@@ -1,0 +1,25 @@
+<form>
+    <div class="input-form">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input [(ngModel)]="firstName" name="firstName" type="text" class="form-control" id="firstName" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input [(ngModel)]="lastName" name="lastName" type="text" class="form-control" id="lastName">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+        </div>
+        <div class="mb-3 form-check">
+            <label class="form-check-label" for="checkbox">Agree to the policy</label><a class="policy" href="#">Read Policy</a>
+            <input [(ngModel)]="isChecked" type="checkbox" class="form-check-input" id="checkbox" (change)="onCheckboxChange()">
+        </div>
+    </div>
+    <button [disabled]="!firstName || !lastName || !email || !password" class="signup" routerLink="/payment">Sign up</button>
+</form>

@@ -1,0 +1,81 @@
+.complete {
+    text-align: center;
+    height: 80vh; 
+}
+
+.completeImg {   
+    position: relative;
+}
+
+.completeText {
+    position: absolute;
+    left: 29%;
+    top: 43%;
+}
+
+.goBacktoHome {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 80%;
+    background-color: #00A692;
+    padding: 12px 0;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.goBacktoHome:hover {
+    border: 2px solid #00A692;
+    background-color: white;
+    color: #00A692;
+    transition: 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .complete {
+        height: 60vh; 
+    }
+
+    .completeText {
+        left: 39%;
+    }
+
+    .completeImg {
+        margin-top: 100px;
+    }
+
+    .goBacktoHome {
+        width: 60%;
+    }
+    
+    .goBacktoHome {
+        font-size: 1.5rem;       
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+        
+    .complete {
+        height: 70vh; 
+    }
+    
+    .completeImg {
+        margin-top: 50px;
+    }
+
+    .completeText {
+        left: 42.5%;
+        top: 38%;
+    }
+        
+    .goBacktoHome {
+        width: 40%;
+    }
+
+}

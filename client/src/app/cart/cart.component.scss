@@ -1,0 +1,165 @@
+.cart {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.imgInfo {
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.colorTotal {  
+    p {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+}
+
+.color, .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amountOption {
+    width: 100%;
+    padding: 5px;
+}
+
+label > input {
+    display: none;
+}
+
+label {
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.fileUpload {
+    margin: 10px 0 30px 0;
+}
+
+.fileNotice {
+    // margin-top: 10px;
+    font-size: 0.8rem;
+    margin: 10px 0 0 0;
+    color: #E73245;
+}
+
+.logIn {
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #00A692;
+    padding: 8px 0;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.logIn:hover {
+    border: 2px solid #00A692;
+    background-color: white;
+    color: #00A692;
+    transition: 0.3s;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    border: none;
+    background-color: #00A692;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+        
+    .cart {
+        width: 70%;
+    }
+    
+    .productName {
+        font-size: 2.2rem;
+    }
+
+    .cartInfo p {
+        font-size: 1.6rem;
+    }
+
+    .imgInfo {
+        margin-bottom: 50px;
+    }
+
+    .amountOption {
+        padding: 12px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .fileUpload {
+        margin-bottom: 50px;
+    }
+
+    .selectedFileName {
+        font-size: 1.3rem;
+    }
+
+    .fileNotice {
+        font-size: 1.3rem;
+    }
+
+    label {
+        padding: 12px;
+        font-size: 1.5rem;
+    }
+
+    .logIn {
+        font-size: 1.5rem;       
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .cart {
+        width: 60%;
+    }
+
+    .bottomPart {
+        margin: 0 auto;
+    }
+
+    .productName {
+        font-size: 2rem;
+    }
+
+    .cartInfo p {
+        font-size: 1.5rem;
+    }
+    
+    label {
+        font-size: 1.3rem;
+    }
+
+    .selectedFileName {
+        font-size: 1.1rem;
+    }
+
+    .fileNotice {
+        font-size: 1.1rem;
+    }
+
+    .logIn {
+        font-size: 1.3rem;       
+    }
+}

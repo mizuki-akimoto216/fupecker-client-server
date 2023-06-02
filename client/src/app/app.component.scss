@@ -1,0 +1,94 @@
+.bg-light {
+    background-color: #4169E2 !important;
+}
+
+.cart, .account {
+    color: white;
+}
+
+.cart {
+    margin-right: 15px;
+}
+
+.nav-item a {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 15px;
+} 
+
+footer {
+    background-color: #4169E2;
+    padding: 50px 0 30px 0; 
+    h2 {
+        margin-bottom: 50px;
+    }
+    p {
+        text-align: center;
+        color: white;
+        font-size: 0.8rem;
+        margin-top: 50px;
+    }
+}
+
+.snsLikns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+    a {
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .navbar {
+        padding: 30px;
+    } 
+    
+    .bi-cart-fill, .bi-person-fill {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cart {
+        margin-right: 20px;
+    }
+
+    .nav-item a {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        .brandName{
+            width: 300px;
+            padding: 20px;
+            font-size: 2rem;
+        }
+        .logo {
+            width: 60px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .navbar {
+        padding: 20px;
+    } 
+    
+    .bi-cart-fill, .bi-person-fill {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-item a {
+        font-size: 1.2rem;
+    }
+}

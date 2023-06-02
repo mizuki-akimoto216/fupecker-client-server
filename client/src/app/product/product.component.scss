@@ -1,0 +1,139 @@
+.row {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.productImg {
+    margin: 0 auto 20px auto;
+}
+
+.carousel {
+    margin-bottom: 10px;
+}
+
+.imgPreview {
+    display: flex;
+    align-items: center;
+}
+
+.imgPreview img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.productNamePrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.colorSelect {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.addCart {
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #E73245;
+    padding: 8px 0;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.addCart:hover {
+    border: 2px solid #E73245;
+    background-color: white;
+    color: #E73245;
+    transition: 0.3s;
+}
+
+.description {
+    margin: 0;
+}
+
+.productErrorMessage {
+    color: #E73245;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .carousel {
+        margin-bottom: 30px;
+    }
+
+    .imgPreview {
+        margin-bottom: 30px;
+    }
+
+    .imgPreview img {
+        width: 80px;
+    }
+
+    .productName {
+        font-size: 2.2rem;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+
+    .colorSelect {
+        padding: 15px;
+    }
+
+    .addCart {
+        padding: 15px 0;
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .description {
+        font-size: 1.6rem;
+    }
+
+    .productErrorMessage {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .productInfo {
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+
+    .productName {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+    
+    .addCart {
+        padding: 10px 0;
+        font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+    }
+    
+    .productErrorMessage {
+        font-size: 1.3rem;
+    }
+}

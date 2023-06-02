@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+       <div class="col-2 admin-menu">
+           <h2 class="admin-title flex">
+               <img src="../../assets/logo.png" alt="">
+               Admin
+           </h2>
+           <ul>
+               <li>Products</li>
+               <li>Orders</li>
+               <li>Reports</li>
+               <li>Messages</li>
+               <li>Settings</li>
+               <li>Sign Out</li>        
+           </ul>
+       </div>
+       <div class="col-10 productDetailList">
+           <h2 class="admin-title">Product details</h2>
+           <p class="message">{{message}}</p>
+           <table class="table">
+               <thead>
+                 <tr>
+                   <th scope="col">Image</th>
+                   <th scope="col">Color code</th>
+                   <th scope="col">Color name</th>
+                   <th scope="col"></th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr *ngFor="let productDetail of productDetails">
+                   <td class="image"><input type="text" [(ngModel)]="productDetail.image"></td>
+                   <td class="colorCode"><input type="text" [(ngModel)]="productDetail.colorCode"></td>
+                   <td class="colorName"><input type="text" [(ngModel)]="productDetail.colorName"></td>
+                   <td class="buttons">
+                       <button (click)="updateProductDetail(productDetail)" class="update-btn">Update</button>
+                       <button (click)="deleteProductDetail(productDetail)" class="delete-btn">Delete</button>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td class="image"><input type="text" [(ngModel)]="image"></td>
+                   <td class="colorCode"><input type="text" [(ngModel)]="colorCode"></td>
+                   <td class="colorName"><input type="text" [(ngModel)]="colorName"></td>
+                   <td class="buttons">
+                       <button (click)="addNewPD()" class="addnew-btn">Add New</button>
+                   </td>
+                 </tr>
+               </tbody>
+             </table>
+       </div>
+    </div>
+</div>
+

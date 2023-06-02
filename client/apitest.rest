@@ -1,0 +1,97 @@
+@port=4400
+
+//20230504
+//For home
+### R - Read
+GET http://localhost:{{port}}/products
+
+### R - Get a product by id
+GET http://localhost:{{port}}/products/1
+
+### R - Get the first product that has a keyword
+GET http://localhost:{{port}}/products/gradient
+
+
+//For product page
+### Get product info
+GET http://localhost:{{port}}/productsInfo/1
+
+
+//For user
+### get user information
+POST http://localhost:{{port}}/users
+Content-Type: application/json
+
+{
+    "email": "aaa@a.com",
+    "password": "aaa1234"
+}
+
+
+//For admin product
+### R - Read
+GET http://localhost:{{port}}/adminProducts
+
+### C - Create
+POST http://localhost:{{port}}/adminProducts
+Content-Type: application/json
+
+{
+    "name": "dddd",
+    "price": 9999,
+    "stock": 2,
+    "description": "ddd",
+    "online": true
+}
+
+### U - Update
+PUT http://localhost:{{port}}/adminProducts/5
+Content-Type: application/json
+
+{
+    "name": "xxx",
+    "price": 0,
+    "stock": 1,
+    "description": "xxx",
+    "online": false
+}
+
+### D - Delete
+DELETE http://localhost:{{port}}/adminProducts/4
+
+
+//For admin product detail
+### R - Read
+GET http://localhost:{{port}}/adminProductDetails/1
+
+### C - Create productDetail
+POST http://localhost:{{port}}/adminProductDetails
+Content-Type: application/json
+
+{
+    "id": 12,
+    "image": "v",
+    "colorCode": "v",
+    "colorName": "V"
+}
+
+### U - Update productDetail
+PUT http://localhost:{{port}}/adminProductDetails/12
+Content-Type: application/json
+
+{
+    "image": "ccc.png",
+    "colorCode": "#ccc",
+    "colorName": "ccc"
+}
+
+### D - Delete
+DELETE http://localhost:{{port}}/adminProductDetails/12
+
+### Update online
+PUT http://localhost:{{port}}/productOnline/1
+Content-Type: application/json
+
+{
+    "online": true
+}
