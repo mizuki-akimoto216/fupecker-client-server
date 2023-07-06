@@ -80,7 +80,7 @@
                 </button>
               </div>
               <div class="colorOptions">
-                <div class="colorOption" *ngFor="let colorCode of parseColorData(product.color)" [style.backgroundColor]="colorCode"></div>
+                <div class="colorOption" *ngFor="let colorCode of product.color" [style.backgroundColor]="'#' + colorCode"></div>
               </div>
               <h3> {{ product.name }} </h3>
               <div class="stockPrice">

@@ -36,10 +36,6 @@ export class ProductComponent {
     });
   }
 
-  parseColorName(colorName : string): string[] {
-    return JSON.parse(colorName);
-  }
-
   // productInfo:productInfo = 
   //   {
   //     productId: 1,

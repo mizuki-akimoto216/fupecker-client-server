@@ -30,10 +30,6 @@ export class HomeComponent {
     return this.hiddenProductList.includes(product);
   }
 
-  parseColorData(colorData : string): string[] {
-    return JSON.parse(colorData);
-  }
-
   // productList:Product[] = [
   //   { 
   //     productId: 1,

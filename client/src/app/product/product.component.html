@@ -37,7 +37,7 @@
                 <option value="">
                     Select Color
                 </option>
-                <option [value]="colorName" *ngFor="let colorName of parseColorName(productInfo.colorName)">
+                <option [value]="colorName" *ngFor="let colorName of productInfo.colorName">
                     {{ colorName }}
                 </option>
             </select>
