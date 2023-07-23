@@ -1,61 +1,17 @@
 <section class="top">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="firstBanner d-block w-100">
-                <div class="topUpper">
-                        <img class="topPet" src="../../assets/topCat.png" alt="Top image of cat for fupecker">
-                        <img class="topPad" src="../../assets/padTop.png" alt="Top image of pad for fupecker">
-                </div>
-                <h1 class="brandName">
-                    Fupecker
-                    <img class="logo" src="../../assets/logo.png" alt="Logo of fupecker">
-                </h1>
-                <div class="topBottom">
-                    <img class="topPad" src="../../assets/padBottm.png" alt="Top image of pad for fupecker">
-                    <img class="topPet" src="../../assets/topDog.png" alt="Top image of dog for fupecker">
-                </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="secondBanner d-block w-100">
-                <div class="bannerText">
-                    <img src="../../assets/textbg1.png" alt="">
-                    <h2>Shape your Memory<br>
-                        with your pet!</h2>
-                </div>
-                <div class="imgFlex">
-                    <img class="iphone" src="../../assets/iphone.png" alt="">
-                    <img class="coloredDog" src="../../assets/coloredDog.png" alt="">
-                </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="thirdBanner d-block w-100">
-                <div class="bannerText">
-                    <img src="../../assets/textbg2.png" alt="">
-                    <h2>Make the only sticker<br>
-                        in the world</h2>
-                </div>
-                <div class="imgFlex">
-                    <img class="notebook" src="../../assets/notebook.png" alt="">
-                    <img class="pc" src="../../assets/pc.png" alt="">
-                </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+  <div class="wrap topCont">
+    <img class="topImg" src="../../assets/topImg.png" alt="">
+    <div class="top-r">
+      <img class="topText" src="../../assets/topText.png" alt="">
+      <p class="topIntro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+      <button class="shopNow" href="#shop">SHOP NOW</button>
+    </div>
+  </div>
 </section>
-<section class="products container-fluid">
-    <div class="row">
+<section id="shop" class="products wrap">
+    <img class="shopTitle" src="../../assets/shopTitle.png" alt="">
+    <div class="container-fluid">
+      <div class="row">
         <div *ngFor="let product of productList" class="product col-xl-4 col-md-6 col-12" [hidden]=isHiddenProduct(product)>
           <div class="productContents">
               <div id="carousel{{ product.productID }}" class="carousel slide">
@@ -82,50 +38,76 @@
               <div class="colorOptions">
                 <div class="colorOption" *ngFor="let colorCode of product.color" [style.backgroundColor]="'#' + colorCode"></div>
               </div>
-              <h3> {{ product.name }} </h3>
+              <h3 class="productName"> {{ product.name }} </h3>
               <div class="stockPrice">
                   <p class="price">$ {{ product.price }} </p>
                   <p class="stock"> {{ product.stock }}  stock</p>
               </div>
-              <button [disabled]=checkStock(product.stock) [routerLink]="['/product', product.productID ]" class="buyNow">Buy Now</button>
+              <button [disabled]=checkStock(product.stock) [routerLink]="['/product', product.productID ]" class="buyNow">BUY NOW</button>
               <p class="description">{{ product.description }}</p>
           </div>
       </div>
     </div>
+  </div>
 </section>
-<section class="howToOrder">
-    <h2 class="howToOrderTitle">How to Order</h2>
-    <div class="process container">
-        <div class="row">
-            <div class="introduction col-xl-4 col-md-6 col-12">
-                <h2 class="processNo">01</h2>
-                <div class="text">
-                    <h3>Choose template</h3>
-                    <p>Lorem ipsum dolor sit amet, consect<br>
-                        etur adipiscing elit. Vivamus nec nisl</p>
-                </div>
-                <img src="../../assets/order1.png" alt="">
-            </div>
-            <div class="introduction col-xl-4 col-md-6 col-12">
-                <h2 class="processNo">02</h2>
-                <div class="text">
-                    <h3>Upload Images</h3>
-                    <p>Lorem ipsum dolor sit amet, consect<br>
-                        etur adipiscing elit. Vivamus nec nisl</p>
-                </div>
-                <img src="../../assets/order2.png" alt="">
-            </div>
-            <div class="introduction col-xl-4 col-md-6 col-12">
-                <h2 class="processNo">03</h2>
-                <div class="text">
-                    <h3>Confirm payment</h3>
-                    <p>Lorem ipsum dolor sit amet, consect<br>
-                        etur adipiscing elit. Vivamus nec nisl</p>
-                </div>
-                <img src="../../assets/order3.png" alt="">
-            </div>
+<section id="about" class="about">
+  <img class="dotGrid-l-sp" src="../../assets/dotGrid-l-sp.png" alt="">
+  <img class="dotGrid-l" src="../../assets/dotGrid-l.png" alt="">
+  <img class="circle-r" src="../../assets/circle-r.png" alt="">
+    <div class="aboutCont wrap">
+      <div class="aboutTop">
+        <img class="aboutTitle" src="../../assets/aboutTitle-sp.png" alt="">
+        <p class="aboutText">
+          Fupecker is an online sticker shop that combines your pet's photo with a template. You can always be with your pets by sticking them on your personal belongings such as mobile phones and computers!
+        </p>
+      </div>
+      <img class="aboutPic" src="../../assets/aboutPic.png" alt="">
+  </div>
+  <img class="dotGrid-r-sp" src="../../assets/dotGrid-r-sp.png" alt="">
+  <img class="circle-l" src="../../assets/circle-l.png" alt="">
+  <img class="dotGrid-r" src="../../assets/dotGrid-r.png" alt="">
+</section>
+<section id="howToOrder" class="howToOrder">
+  <img class="order-r" src="../../assets/order-r.png" alt="">
+    <img class="orderTitle" src="../../assets/orderTitle.png" alt="">
+    <div class="processConts wrap">
+      <div class="processCont">
+        <div class="processNum">
+          <p class="process">Process</p>
+          <img class="num" src="../../assets/01.png" alt="">
         </div>
+        <div class="order-text">
+          <h3>Choose a template</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+        </div>
+      </div>
+      <div class="processCont">
+        <div class="processNum">
+          <p class="process">Process</p>
+          <img class="num" src="../../assets/02.png" alt="">
+        </div>
+        <div class="order-text">
+          <h3>Upload your pet's photo</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+        </div>
+      </div>
+      <div class="processCont">
+        <div class="processNum">
+          <p class="process">Process</p>
+          <img class="num" src="../../assets/03.png" alt="">
+        </div>
+        <div class="order-text">
+          <h3>Confirm payment</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+        </div>
+      </div>
     </div>
-
-
+  <img class="order-l" src="../../assets/order-l.png" alt="">
+</section>
+<section class="newsLetter wrap">
+  <img class="newsLetterText" src="../../assets/newsLetterText.png" alt="">
+  <div class="emailSubscribe">
+    <input class="emailInput" type="email">
+    <button class="subscribe">Subscribe</button>
+  </div>
 </section>

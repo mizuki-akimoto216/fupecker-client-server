@@ -1,94 +1,145 @@
-.bg-light {
-    background-color: #4169E2 !important;
-}
+@import '../styles.scss';
 
-.cart, .account {
-    color: white;
-}
-
-.cart {
-    margin-right: 15px;
-}
-
-.nav-item a {
-    color: white;
-    font-weight: bold;
-}
-
-.navbar {
+/* header
+----------------------------------------*/
+header {
     padding: 15px;
-} 
+    @include flex($jc:space-between);
+}
 
-footer {
-    background-color: #4169E2;
-    padding: 50px 0 30px 0; 
-    h2 {
-        margin-bottom: 50px;
+.shopName {
+    
+    color: #fff;
+    @include flex();
+    .logo {
+        width: 30px;
+        margin-right: 10px;
     }
-    p {
-        text-align: center;
-        color: white;
-        font-size: 0.8rem;
-        margin-top: 50px;
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.menuIcon {
+    img {
+        width: 30px;
+    }
+    .cart {
+        margin-right: 4px;
+    }
+}
+
+/* footer
+----------------------------------------*/
+footer {
+    padding: 30px 0 16px 0;
+}
+
+.shopName-footer {
+    a {
+        color: #fff;
+        @include flex();
+    }
+    .logo{
+        width: 45px;
+        margin-right: 10px;
+    }
+    h1 {
+        margin-top: 15px;
     }
 }
 
 .snsLikns {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex();
+    margin: 30px 0;
     padding: 0;
-    max-width: 400px;
-    margin: 0 auto;
-    a {
-        color: white;
+
+    li {
+        margin-right: 15px;
+        
+        img {
+            height: 30px;
+        }
     }
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.copy {
+    font-size: 10px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
     
-    .navbar {
-        padding: 30px;
-    } 
-    
-    .bi-cart-fill, .bi-person-fill {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .cart {
-        margin-right: 20px;
+    /* header
+    ----------------------------------------*/
+    header {
+        padding: 20px;
     }
 
-    .nav-item a {
-        font-size: 1.6rem;
-    }
-
-    footer {
-        .brandName{
-            width: 300px;
-            padding: 20px;
-            font-size: 2rem;
-        }
+    .shopName {
         .logo {
-            width: 60px;
+            width: 40px;
+        }
+        h1 {
+            font-size: 24px;
         }
     }
-
+    
+    .menuIcon {
+        img {
+            width: 35px;
+        }
+        .cart {
+            margin-right: 8px;
+        }
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     
-    .navbar {
-        padding: 20px;
-    } 
-    
-    .bi-cart-fill, .bi-person-fill {
-        width: 35px;
-        height: 35px;
+    /* header
+    ----------------------------------------*/
+    header {
+        padding: 24px 40px;
     }
 
-    .nav-item a {
-        font-size: 1.2rem;
+    .menu {
+        display: block;
+        ul {
+            @include flex();
+            margin: 0;
+            padding: 0;
+            li a {
+                color: #fff;
+                font-family: 'Kadwa', serif;
+                font-size: 20px;
+                margin-right: 40px;
+            }
+        }
+    }
+    
+    .menuIcon {
+        .cart {
+            margin-right: 20px;
+        }
+    }
+
+    /* footer
+    ----------------------------------------*/
+    .snsLikns li {
+        margin-right: 30px;
+    }
+
+    .copy {
+        font-size: 12px;
     }
 }
