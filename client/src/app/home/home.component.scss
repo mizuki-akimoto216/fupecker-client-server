@@ -63,7 +63,7 @@
 }
 
 .productContents {
-    width: 90%;
+    width: 80%;
     margin: 40px auto;
 }
 
@@ -316,7 +316,11 @@ button[disabled]:hover {
         width: 300px;
         margin-bottom: 24px;
     }
-
+    
+    .description{
+        font-size: 16px;
+    }
+    
     /* about
     ----------------------------------------*/
     .aboutTitle {
@@ -384,7 +388,7 @@ button[disabled]:hover {
     /* product
     ----------------------------------------*/
     .product {
-        width: 360px;
+        width: 390px;
     }
 
     .productContents {

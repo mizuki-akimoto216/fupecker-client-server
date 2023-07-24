@@ -43,19 +43,16 @@
     text-align: center;
     display: block;
     width: 100%;
-    background-color: #E73245;
+    background-color: #FF56C9;
     padding: 8px 0;
-    color: white;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: bold;
-    border-radius: 7px;
+    color: #fff;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
 .addCart:hover {
-    border: 2px solid #E73245;
-    background-color: white;
-    color: #E73245;
+    background-color: #fff;
+    color: #FF56C9;
     transition: 0.3s;
 }
 
@@ -64,7 +61,7 @@
 }
 
 .productErrorMessage {
-    color: #E73245;
+    color: #FF56C9;
     margin-bottom: 10px;
 }
 
@@ -123,6 +120,10 @@
     .price {
         font-size: 1.5rem;
     }
+
+    .productNamePrice {
+        margin-bottom: 0;
+    }
     
     .addCart {
         padding: 10px 0;
@@ -135,5 +136,9 @@
     
     .productErrorMessage {
         font-size: 1.3rem;
+    }
+
+    .colorSelect {
+        margin: 32px 0;
     }
 }

@@ -42,7 +42,7 @@
                 </option>
             </select>
             <div *ngIf="showErrorMessage" class="productErrorMessage">Please select a color</div>
-            <a (click)="addToCart()" class="addCart">Add to Cart</a>
+            <a routerLink="/home" class="addCart">Add to Cart</a>
             <p class="description">{{ productInfo.description }}</p>
         </div>
     </div>

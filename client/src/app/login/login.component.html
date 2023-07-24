@@ -13,7 +13,7 @@
             <div class="message" *ngIf="!loginSuccess">Your password or email is not collect</div>
           </div>
     </div>
-    <button [disabled]="!email || !password" class="login" routerLink="/payment">Log in for customer</button>
+    <button [disabled]="!email || !password" class="login" routerLink="/home">Log in for customer</button>
     <button (click)="login()" [disabled]="!email || !password" class="login l-admin">Log in for staff</button>
-
+    <p class="email-pass">Please enter "test@test.com" to email, "test" to password and push "Log in for staff"</p>
 </form>

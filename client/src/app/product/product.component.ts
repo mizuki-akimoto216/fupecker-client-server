@@ -27,27 +27,12 @@ export class ProductComponent {
 
     this.http.get(environment.server + "/productsInfo/" + productID).subscribe(productData =>{
       this.productInfo = productData;
-      // console.log("productData is:", productData);
-      // console.log("firstProduct is:", this.productInfo.firstProduct);
       this.mainImage = this.productInfo.firstProduct;
       this.firstCarousel = this.productInfo.firstProduct;
       this.secondCarousel = this.productInfo.secondProduct;
       this.thirdCarousel = this.productInfo.thirdProduct;
     });
   }
-
-  // productInfo:productInfo = 
-  //   {
-  //     productId: 1,
-  //     firstProduct: "../../assets/product1-1.png",
-  //     secondProduct: "../../assets/product1-2.png",
-  //     thirdProduct: "../../assets/product1-3.png",
-  //     productName: "Gradient",
-  //     price: 8,
-  //     colorName: ["Purple", "Pink", "Orange" ],
-  //     stock: 10,
-  //     description: "This is sticker with beautiful gradient. Lorem ipsum dolor sit amet, consect etur adipiscing elit. Vivamus nec nisl quis tellus maximus blandit."
-  //   }
   
   switchImage(imagePath: string) {
     this.mainImage = imagePath;

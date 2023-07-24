@@ -11,32 +11,29 @@ form {
     text-align: center;
     display: block;
     width: 100%;
-    background-color: #00A692;
+    background-color: #fff;
     padding: 10px 0;
-    color: white;
+    color: #FF56C9;
     font-family: 'Fredoka', sans-serif;
     font-weight: bold;
     border-radius: 7px;
 }
 
 .login:hover {
-    border: 2px solid #00A692;
-    background-color: white;
-    color: #00A692;
+    background-color: #FF56C9;
+    color: #fff;
     transition: 0.3s;
 }
 
 .l-admin {
-    border: 2px solid #00A692;
-    background-color: white;
-    color: #00A692;
+    background-color: #FF56C9;
+    color: #fff;
     margin-top: 24px;
 }
 
 .l-admin:hover {
-    border: 2px solid white;
-    background-color: #00A692;
-    color: white;
+    background-color: #fff;
+    color: #FF56C9;
     margin-top: 24px;
 }
 
@@ -45,17 +42,14 @@ button[disabled] {
     cursor: not-allowed;
 }
 
-button[disabled]:hover {
-    border: none;
-    background-color: #00A692;
-    color: white;
-}
-
 .message {
-    color: #E73245;
+    color: #FF56C9;
 }
 
-
+.email-pass {
+    font-size: 16px;
+    margin-top: 23px;
+}
 
 @media only screen and (min-width: 768px) { 
     

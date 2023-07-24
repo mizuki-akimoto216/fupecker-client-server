@@ -1,18 +1,18 @@
 <section class="top">
   <div class="wrap topCont">
-    <img class="topImg" src="../../assets/topImg.png" alt="">
-    <div class="top-r">
+    <img class="topImg fadeUp" src="../../assets/topImg.png" alt="">
+    <div class="top-r fadeUp">
       <img class="topText" src="../../assets/topText.png" alt="">
       <p class="topIntro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
-      <button class="shopNow" href="#shop">SHOP NOW</button>
+      <a class="shopNow" href="#shop">SHOP NOW</a>
     </div>
   </div>
 </section>
-<section id="shop" class="products wrap">
-    <img class="shopTitle" src="../../assets/shopTitle.png" alt="">
+<section id="shop" class="products">
+    <img class="shopTitle fadeUpTrigger" src="../../assets/shopTitle.png" alt="">
     <div class="container-fluid">
       <div class="row">
-        <div *ngFor="let product of productList" class="product col-xl-4 col-md-6 col-12" [hidden]=isHiddenProduct(product)>
+        <div *ngFor="let product of productList" class="product col-xl-4 col-md-6 col-12 fadeUpTrigger" [hidden]=isHiddenProduct(product)>
           <div class="productContents">
               <div id="carousel{{ product.productID }}" class="carousel slide">
                 <div class="carousel-inner">
@@ -56,12 +56,12 @@
   <img class="circle-r" src="../../assets/circle-r.png" alt="">
     <div class="aboutCont wrap">
       <div class="aboutTop">
-        <img class="aboutTitle" src="../../assets/aboutTitle-sp.png" alt="">
-        <p class="aboutText">
+        <img class="aboutTitle fadeUpTrigger" src="../../assets/aboutTitle-sp.png" alt="">
+        <p class="aboutText fadeUpTrigger">
           Fupecker is an online sticker shop that combines your pet's photo with a template. You can always be with your pets by sticking them on your personal belongings such as mobile phones and computers!
         </p>
       </div>
-      <img class="aboutPic" src="../../assets/aboutPic.png" alt="">
+      <img class="aboutPic fadeUpTrigger" src="../../assets/aboutPic.png" alt="">
   </div>
   <img class="dotGrid-r-sp" src="../../assets/dotGrid-r-sp.png" alt="">
   <img class="circle-l" src="../../assets/circle-l.png" alt="">
@@ -69,9 +69,9 @@
 </section>
 <section id="howToOrder" class="howToOrder">
   <img class="order-r" src="../../assets/order-r.png" alt="">
-    <img class="orderTitle" src="../../assets/orderTitle.png" alt="">
+    <img class="orderTitle fadeUpTrigger" src="../../assets/orderTitle.png" alt="">
     <div class="processConts wrap">
-      <div class="processCont">
+      <div class="processCont fadeUpTrigger">
         <div class="processNum">
           <p class="process">Process</p>
           <img class="num" src="../../assets/01.png" alt="">
@@ -81,7 +81,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
         </div>
       </div>
-      <div class="processCont">
+      <div class="processCont fadeUpTrigger">
         <div class="processNum">
           <p class="process">Process</p>
           <img class="num" src="../../assets/02.png" alt="">
@@ -91,7 +91,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
         </div>
       </div>
-      <div class="processCont">
+      <div class="processCont fadeUpTrigger">
         <div class="processNum">
           <p class="process">Process</p>
           <img class="num" src="../../assets/03.png" alt="">
@@ -105,8 +105,8 @@
   <img class="order-l" src="../../assets/order-l.png" alt="">
 </section>
 <section class="newsLetter wrap">
-  <img class="newsLetterText" src="../../assets/newsLetterText.png" alt="">
-  <div class="emailSubscribe">
+  <img class="newsLetterText fadeUpTrigger" src="../../assets/newsLetterText.png" alt="">
+  <div class="emailSubscribe fadeUpTrigger">
     <input class="emailInput" type="email">
     <button class="subscribe">Subscribe</button>
   </div>

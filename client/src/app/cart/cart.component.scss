@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .cart {
     width: 90%;
     margin: 50px auto;
@@ -17,9 +19,7 @@
 }
 
 .color, .total{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($jc: space-between);
 }
 
 .amountOption {
@@ -43,7 +43,6 @@ label {
 }
 
 .fileNotice {
-    // margin-top: 10px;
     font-size: 0.8rem;
     margin: 10px 0 0 0;
     color: #E73245;

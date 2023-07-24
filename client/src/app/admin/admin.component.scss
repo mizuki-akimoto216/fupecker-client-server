@@ -2,13 +2,17 @@
     margin: 36px 0;
 }
 
+th {
+    color: #fff;
+}
+
 input, textarea {
     width: 100%;
 }
 
 .admin-menu {
     padding: 0 48px;
-    border-right: 1px solid black;
+    border-right: 1.5px solid rgb(146, 146, 146);
 
     ul {
         margin: 60px 0 120px 0;
@@ -30,17 +34,6 @@ input, textarea {
 .message {
     color: #e73245;
     font-size: 20px;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 46px;
-        margin-right: 16px;
-    }
 }
 
 .productList {
@@ -65,7 +58,7 @@ input, textarea {
         margin-right: 8px;
         padding: 4px 16px;
         border-radius: 5px;
-        color: white;
+        color: #fff;
     }
 
     .update-btn {
@@ -73,8 +66,7 @@ input, textarea {
     } 
 
     .update-btn:hover {
-        border: 1px solid #4169e2;
-        background-color: white;
+        background-color: #fff;
         color: #4169e2;
         transition: 0.3s;
     }
@@ -84,34 +76,31 @@ input, textarea {
     }
 
     .delete-btn:hover {
-        border: 1px solid #e73245;
-        background-color: white;
+        background-color: #fff;
         color: #e73245;
         transition: 0.3s;
     }
 
     .detail-btn {
-        background-color: #00a692;
-        color: white;  
+        background-color: #00a692; 
+        color: #fff;
         padding: 6px 17px;
         border-radius: 5px;
     }
 
     .detail-btn:hover {
-        border: 1px solid #00a692;
-        background-color: white;
+        background-color: #fff;
         color: #00a692;
         transition: 0.3s;
     }
 
     .addnew-btn {
         padding: 8px 96px;
-        background-color: #F4C530;        
+        background-color: #F4C530;     
     }
 
     .addnew-btn:hover {
-        border: 1px solid #F4C530;
-        background-color: white;
+        background-color: #fff;
         color: #F4C530;
         transition: 0.3s;
     }
