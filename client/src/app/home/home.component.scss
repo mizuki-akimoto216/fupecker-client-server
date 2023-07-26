@@ -222,7 +222,7 @@ button[disabled]:hover {
 }
 
 .process {
-    font-family: Learning Curve;
+    font-family: Learning Curve, 'Dancing Script', serif;
     font-size: 53px;
     color: #29DEFE;
     text-align: left;
@@ -242,12 +242,13 @@ button[disabled]:hover {
 /* news letter
 ----------------------------------------*/
 .newsLetter {
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .newsLetterText {
-    width: 300px;
+    width: 320px;
+    margin-bottom: 10px;
 }
 
 .emailSubscribe {
@@ -255,22 +256,22 @@ button[disabled]:hover {
 }
 
 .emailInput {
-    width: 200px;
-    height: 30px;
+    width: 250px;
+    height: 40px;
     margin-right: 8px;
     border-radius: 4px;
 }
 
-/* subscribe
+/* news letter
 ----------------------------------------*/
 .subscribe {
     display: inline-block;
     background-color: #FF56C9;
-    padding: 8px 12px;
+    padding: 10px 16px;
     color: #fff;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .subscribe:hover {
@@ -351,7 +352,7 @@ button[disabled]:hover {
     }
 
     
-    /* newsLetter
+    /* news letter
     ----------------------------------------*/
     .newsLetter{
         @include flex();
@@ -483,8 +484,8 @@ button[disabled]:hover {
     }
 
     .emailInput {
-        width: 300px;
-        height: 40px;
+        width: 350px;
+        height: 50px;
         border-radius: 8px;
         padding: 0 10px;
     }
@@ -492,5 +493,9 @@ button[disabled]:hover {
     .subscribe {
         font-size: 16px;
         border-radius: 8px;
+    }
+
+    .subscribe {
+        padding: 13px 16px;
     }
 }
