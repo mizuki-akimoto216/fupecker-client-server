@@ -1,5 +1,5 @@
 @port=4400
-
+@url=https://node.mizukiakimoto.me
 //20230504
 //For home
 ### R - Read
@@ -95,3 +95,9 @@ Content-Type: application/json
 {
     "online": true
 }
+
+### R - Read
+GET {{url}}/products
+
+### Get product info
+GET {{url}}/productsInfo/1
