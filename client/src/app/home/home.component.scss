@@ -222,8 +222,8 @@ button[disabled]:hover {
 }
 
 .process {
-    font-family: Learning Curve, 'Dancing Script', serif;
-    font-size: 53px;
+    font-family: 'Dancing Script', serif;
+    font-size: 40px;
     color: #29DEFE;
     text-align: left;
 }
@@ -343,6 +343,10 @@ button[disabled]:hover {
         margin: 0 auto;
     }
 
+    .process {
+        font-size: 48px;
+    }
+
     .num {
         left: 29%;
     }
@@ -359,7 +363,7 @@ button[disabled]:hover {
     }
 
     .newsLetterText {
-        margin-right: 20px;
+        margin: 0 20px 0 0;
     }
 }
 
@@ -463,7 +467,7 @@ button[disabled]:hover {
         max-width: 1500px;
         margin: 0 auto;
     }
-    
+
     .order-r, .order-l {
         height: 200px;
     }
