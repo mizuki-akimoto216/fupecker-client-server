@@ -17,23 +17,24 @@ server.listen(port, () => {
     console.log('server started and sunning port on', port);
 })
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     port: process.env.DBPORT,
     host: process.env.DBSERVER,
     user: process.env.DBUSER,
     password: process.env.DBPASSWORD,
-    database: process.env.DB
+    database: process.env.DB,
+    connectionLimit: 10
 })
 
-db.connect((error) => {
-    // if(error){
-    //     console.log('Connection to SQL failed', error);
-    // } else {
-    //     console.log('Successfully connected to MySQL');
-    // }
-    //ifelseのいい感じの書き方
-    (error)? console.log('Connection to SQL failed', error) : console.log('Successfully connected to MySQL');
-})
+// db.connect((error) => {
+//     // if(error){
+//     //     console.log('Connection to SQL failed', error);
+//     // } else {
+//     //     console.log('Successfully connected to MySQL');
+//     // }
+//     //ifelseのいい感じの書き方
+//     (error)? console.log('Connection to SQL failed', error) : console.log('Successfully connected to MySQL');
+// })
 
 //For home
 //get all product
