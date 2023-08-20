@@ -9,8 +9,7 @@
             <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
           </div>
           <div [hidden]="hideLoginStatus">
-            <div class="message" *ngIf="loginSuccess">Greate!</div>
-            <div class="message" *ngIf="!loginSuccess">Your password or email is not collect</div>
+            <div class="message">Your password or email is not collect</div>
           </div>
     </div>
     <button [disabled]="!email || !password" class="login" routerLink="/home">Log in for customer</button>

@@ -22,12 +22,7 @@ export class HomeComponent {
     this.http.get<Products>(environment.server + "/products").subscribe(responce => {
       console.log(responce.products);
       this.productList = responce.products;
-      this.hiddenProductList = this.productList.filter(product => product.online === 0);
     });
-  }
-
-  isHiddenProduct(product: Product): boolean {
-    return this.hiddenProductList.includes(product);
   }
 
   checkStock(stock:number){
